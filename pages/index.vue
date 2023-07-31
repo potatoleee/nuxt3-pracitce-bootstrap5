@@ -17,6 +17,18 @@ const showModal = () => {
 const hideModal = () => {
   myModal.hide();
 };
+
+const config = useRuntimeConfig();
+console.log(config.public);
+
+if (process.server) {
+  console.log('server token:', config.token);
+}
+
+console.log('ENV=>', process.env.ENV);
+console.log('WEB_URL=>', process.env.WEB_URL);
+const { VITE_APP_URL, VITE_APP_PATH } = import.meta.env;
+console.log(VITE_APP_URL, VITE_APP_PATH);
 </script>
 <template>
   <div>
