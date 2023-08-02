@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div>
-    <h1>這是關於我們</h1>
+    <h1>ssh test</h1>
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
