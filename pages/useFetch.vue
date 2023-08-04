@@ -28,7 +28,10 @@ const { data } = await useAsyncData('userInfo', () => $fetch('https://api.nuxtjs
 console.log(data);
 </script>
 <template>
-  <div>useFetch</div>
-  {{ data }}
+  <div>
+    <div>useFetch</div>
+
+    {{ data }}
+  </div>
 </template>
 <style></style>

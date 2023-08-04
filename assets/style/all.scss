@@ -1,12 +1,11 @@
-@import 'bootstrap/scss/functions';
-@import './helpers/variables';
-@import 'bootstrap/scss/variables-dark';
-@import 'bootstrap/scss/maps';
-@import 'bootstrap/scss/utilities';
-@import './helpers/utilities';
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/utilities";
+@import "./helpers/utilities";
+@import "bootstrap/scss/bootstrap";
 
-@import './base/font';
-@import './base/base';
-@import './helpers/mixin';
-@import './helpers/helper';
+@import "./base/font";
+@import "./base/base";
+@import "./helpers/mixin";
+@import "./helpers/helper";

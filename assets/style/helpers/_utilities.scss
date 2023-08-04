@@ -1,21 +1,21 @@
 $utilities: map-merge(
   $utilities,
   (
-    'font-size':
+    "font-size":
       map-merge(
-        map-get($utilities, 'font-size'),
+        map-get($utilities, "font-size"),
         (
           responsive: true,
           rfs: false
         )
       ),
-    'font-weight': (
+    "font-weight": (
       responsive: true,
       property: font-weight,
       class: fw,
       values: $weightValue
     ),
-    'text-opacity': (
+    "text-opacity": (
       css-var: true,
       class: text-opacity,
       values: (
@@ -26,18 +26,7 @@ $utilities: map-merge(
         100: 1
       )
     ),
-    'text-align': (
-      responsive: true,
-      property: text-align,
-      class: text,
-      values: (
-        start: left,
-        end: right,
-        center: center,
-        justify: justify
-      )
-    ),
-    'bg-opacity': (
+    "bg-opacity": (
       css-var: true,
       class: bg-opacity,
       values: (
@@ -46,25 +35,26 @@ $utilities: map-merge(
         30: 0.3,
         40: 0.4,
         50: 0.5,
-        60: 0.6,
         70: 0.7,
-        75: 0.75,
-        80: 0.8,
-        90: 0.9,
         100: 1
       )
     ),
-    'letter-spacing': (
+    "letter-spacing": (
       responsive: true,
       property: letter-spacing,
       class: letter-spacing,
       values: (
-        1: 0.1em,
-        2: 0.2em,
-        3: 0.3em
+        1: 1px,
+        2: 2px,
+        4: 4px,
+        8: 8px,
+        12: 12px,
+        16: 16px,
+        24: 24px,
+        32: 32px
       )
     ),
-    'writing-mode': (
+    "writing-mode": (
       responsive: true,
       property: writing-mode,
       class: vertical,
@@ -73,30 +63,18 @@ $utilities: map-merge(
         lr: vertical-lr
       )
     ),
-    'object-fit': (
+    "object-fit": (
       property: object-fit,
       class: object,
       values: cover
     ),
-    'cursor': (
+    "cursor": (
       property: cursor,
       class: cursor,
       values: pointer
     ),
-    'text-decoration': (
-      property: text-decoration,
-      class: text-decoration,
-      values: underline
-    ),
-    'text-shadow': (
-      property: text-shadow,
-      class: text-shadow,
-      values: (
-        null: 2px 2px 2px #00000066
-      )
-    ),
 
-    'height': (
+    "height": (
       property: height,
       responsive: true,
       class: h,
@@ -115,26 +93,24 @@ $utilities: map-merge(
         75: 75%,
         80: 80%,
         100: 100%,
-        40vh: 40vh,
         100vh: 100vh,
         auto: auto
       )
     ),
-    'width':
+    "width":
       map-merge(
-        map-get($utilities, 'width'),
+        map-get($utilities, "width"),
         (
           class: w,
           responsive: true,
           values:
             map-merge(
-              map-get(map-get($utilities, 'width'), 'values'),
+              map-get(map-get($utilities, "width"), "values"),
               (
                 1: 1px,
                 2n: 8px,
                 3n: 12px,
                 4n: 16px,
-                5n: 20px,
                 8n: 32px,
                 10n: 40px,
                 12n: 48px,
@@ -165,19 +141,19 @@ $utilities: map-merge(
             )
         )
       ),
-    'z-index': (
+    "z-index": (
       property: z-index,
       responsive: true,
       class: z,
-      values: $zindex-levels
+      values: $zindex-values
     ),
-    'start': (
+    "start": (
       property: left,
       class: start,
       responsive: true,
       values: $position-values
     ),
-    'border-opacity': (
+    "border-opacity": (
       css-var: true,
       class: border-opacity,
       values: (
@@ -190,11 +166,22 @@ $utilities: map-merge(
         100: 1
       )
     ),
-    'overflow-x': (
+    "shadow": (
+      property: box-shadow,
+      class: shadow,
+      responsive: true,
+      values: (
+        null: $box-shadow,
+        sm: $box-shadow-sm,
+        lg: $box-shadow-lg,
+        none: none
+      )
+    ),
+    "overflow-x": (
       property: overflow-x,
       values: auto hidden visible scroll
     ),
-    'overflow-y': (
+    "overflow-y": (
       property: overflow-y,
       values: auto hidden visible scroll
     )

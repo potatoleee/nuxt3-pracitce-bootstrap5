@@ -3,29 +3,14 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:nuxt/recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'plugin:prettier/recommended'],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 13,
+    sourceType: 'module'
   },
   plugins: ['prettier'],
   rules: {
+    'no-undef': 'off',
     'prettier/prettier': 'error'
-  },
-  overrides: [
-    {
-      files: [
-        '**/pages/**/*.{js,ts,vue}',
-        '**/layouts/**/*.{js,ts,vue}',
-        '**/app.{js,ts,vue}',
-        '**/error.{js,ts,vue}'
-      ],
-      rules: {
-        'vue/multi-word-component-names': 'off'
-      }
-    }
-  ]
+  }
 };

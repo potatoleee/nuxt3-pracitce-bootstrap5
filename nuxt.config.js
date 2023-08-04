@@ -4,11 +4,12 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/eslint-module'],
   css: ['@/assets/style/all.scss'],
   runtimeConfig: {
-    token: '',
     public: {
-      apiUrl: ''
+      apiUrl: '',
+      path: ''
     }
   }
+
   // vite: {
   //   define: {
   //     'process.env': process.env
